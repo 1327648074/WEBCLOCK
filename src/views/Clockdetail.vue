@@ -2,11 +2,11 @@
     <div class="myMenu" style="background-color: #FFFFFF">
         <el-container>
             <el-header>
-                <el-menu  mode="horizontal" @select="handleSelect">
-                    <el-menu-item index="1"><a href="">欢迎来到打卡系统</a></el-menu-item>
-                    <el-menu-item index="2" disabled class="item2">用户名</el-menu-item>
-                    <el-menu-item index="3" class="item3"><a href="/#/user">个人中心</a></el-menu-item>
-                    <el-menu-item index="4" class="item4" size="mini"><a href="/#/about">注销</a></el-menu-item>
+                <el-menu class="el-menu-demo" mode="horizontal" @select="handleSelect">
+                    <el-menu-item index="1">欢迎来到打卡系统</el-menu-item>
+                    <el-menu-item index="2">用户名</el-menu-item>
+                    <el-menu-item index="3" disabled>个人中心</el-menu-item>
+                    <el-menu-item index="4"><a href="">注销</a></el-menu-item>
                 </el-menu>
             </el-header>
                 <el-main class="main">
@@ -106,18 +106,7 @@
 </script>
 
 <style>
-    .el-header /deep/ .item2{
-        position:relative;
-        left:100px
-    }
-    .el-header /deep/ .item3{
-        position:relative;
-        left:100px
-    }
-    .el-header /deep/ .item4{
-        position:relative;
-        left:100px
-    }
+
     .el-header {
         color: #333;
         background-color:#FFFFFF;
@@ -127,8 +116,8 @@
     .myMenu /deep/ .el-menu-item {
         color: #333;
         text-align: center;
-        line-height: 200px;
-        padding: 0 170px;
+        line-height: 50px;
+        padding: 0 150px;
     }
     .myMenu /deep/ .el-main{
         width:1000px;
