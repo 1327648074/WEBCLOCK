@@ -18,7 +18,7 @@
 
 <script>
     import * as CommentData from "../assets/mockdata";
-    import comment from "../components/comments";
+    import comment from "../components/comment";
 
     export default {
         components: {
@@ -51,13 +51,13 @@
         color: #333;
         text-align: center;
         line-height: 50px;
-        padding: 0 150px;
+        padding: 0 135px;
     }
     .myMenu /deep/ .el-main{
         width:1000px;
-        height:700px;
+        height:825px;
         position: relative;
-        top: 50px;
+        top: 0px;
         left: 350px;
         padding:0 0px;
     }
