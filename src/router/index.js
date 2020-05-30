@@ -1,10 +1,16 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Home from "@/views/Home";
 import User from "../views/User";
 import Clockdetail from "@/views/Clockdetail";
 import Edit from "@/views/Edit";
+import Login from "@/views/Login";
+import Register from "@/views/Register";
 import Comments from "@/views/Comments";
+import Blog from "@/views/Blog";
+import UserInfo from "@/views/UserInfo";
+import ChangePwd from "@/views/ChangePwd";
+import MyBlog from "@/views/MyBlog";
 Vue.use(VueRouter);
 
 const routes = [
@@ -12,15 +18,6 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
   {
     path: "/user",
@@ -33,14 +30,44 @@ const routes = [
     component: Clockdetail
   },
   {
+    path: "/userInfo",
+    name: "userinfo",
+    component: UserInfo
+  },
+  {
+    path: "/changePwd",
+    name: "changePwd",
+    component: ChangePwd
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register
+  },
+  {
+    path: "/comment/:id",
+    name: "comment",
+    component: Comments
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: Blog
+  },
+  {
     path: "/edit",
     name: "edit",
     component: Edit
   },
   {
-    path: "/comment",
-    name: "comment",
-    component: Comments
+    path: "/myBlog",
+    name: "myBlog",
+    component: MyBlog
   }
 ];
 
